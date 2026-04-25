@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce — Wild AI</title>
+    <link rel="icon" type="image/png" href="../uploads/logo-1777127155802.png" />
+  <link rel="apple-touch-icon" href="../uploads/logo-1777127155802.png" />
+  <link rel="stylesheet" href="../shared/styles.css" />
+  </head>
+<body>
+<nav><div class="nav-inner"></div></nav>
+<div class="mobile-menu"></div>
+<div id="niche-root"></div>
+
+<script>
+window.NICHE_DATA = {
+  slug: 'ecommerce',
+  name: 'E-Commerce',
+  icon: '&#128722;',
+  glowColor: '#9b4dff',
+  headline: 'Scale support.',
+  headlineAccent: 'Without scaling headcount.',
+  subheadline: 'Wild AI handles order tracking, returns, shipping inquiries, and product questions at any volume — 24/7, with no hold times and no extra hires.',
+  challenges: [
+    { title: 'Support volume spikes crush teams', desc: 'Holiday sales, product launches, and viral moments can 10x your inbound call volume overnight. A fixed support team can\'t scale that fast — but Wild AI can.' },
+    { title: 'Repetitive questions drain agents', desc: '"Where\'s my order?" "How do I return this?" These questions make up the majority of support calls and burn out your team — while keeping them from complex issues that actually need humans.' },
+    { title: 'After-hours calls go unresolved', desc: 'Customers shop at all hours. When they have a problem at midnight and can\'t reach anyone, they file a chargeback or leave a bad review.' },
+  ],
+  featuresIntro: 'Wild AI integrates with your order management system to give callers real-time answers — no agent, no wait, no frustration.',
+  features: [
+    { title: 'Order Status Lookup', desc: 'Callers provide their order number or email and get instant, accurate shipping and delivery status — no agent needed.', icon: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>' },
+    { title: 'Return & Exchange Initiation', desc: 'Wild AI walks callers through your return policy, initiates the return, and provides a label or drop-off instructions.', icon: '<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>' },
+    { title: 'Shipping & Delivery FAQs', desc: 'Estimated delivery times, carrier issues, lost packages — Wild AI handles the full range of shipping inquiries accurately.', icon: '<rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>' },
+    { title: 'Product Information', desc: 'Size guides, material questions, compatibility, stock availability — Wild AI knows your catalog and answers instantly.', icon: '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' },
+    { title: 'Cancellation Handling', desc: 'Callers who want to cancel orders get guided through the process — with a retention offer before confirmation.', icon: '<circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>' },
+    { title: '24/7 Coverage at Any Scale', desc: 'Whether it\'s 10 calls or 10,000, Wild AI handles them all simultaneously without wait times or overtime costs.', icon: '<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>' },
+  ],
+  conversation: [
+    { role: 'caller', text: 'Hi, I ordered something 5 days ago and it still hasn\'t arrived. Order number is 84721.' },
+    { role: 'agent', text: 'Let me pull that up for you. Order 84721 — a pair of running shoes, size 10. It shipped via UPS and is currently showing as "out for delivery" today in your area.' },
+    { role: 'caller', text: 'Oh great! I was worried it was lost.' },
+    { role: 'agent', text: 'Totally understandable — it\'s on its way! The estimated delivery window is between 2 PM and 6 PM today. You\'ll get an email when it\'s delivered. Is there anything else I can help with?' },
+    { role: 'caller', text: 'Actually, can I ask about your return policy in case the size is wrong?' },
+    { role: 'agent', text: 'Of course! You have 30 days from delivery to return or exchange for any reason. Returns are free — you\'d just go to our website or call us back and we\'ll email a prepaid label. No hassle at all.' },
+    { role: 'caller', text: 'Perfect, thanks so much!' },
+    { role: 'agent', text: 'Happy to help! Enjoy your shoes — hope they fit perfectly!' },
+  ],
+  ctaText: 'Stop paying support agents to answer the same questions all day. Let Wild AI handle the volume — instantly, at any scale.',
+};
+</script>
+<script src="../shared/niche-template.js"></script>
+<script src="../shared/animations.js"></script>
+<!-- FLOATING THEME TOGGLE -->
+<button class="theme-float" aria-label="Toggle theme">
+  <span class="theme-float-icon">☀️</span>
+  <span class="theme-float-label">Light Mode</span>
+</button>
+
+</body>
+</html>

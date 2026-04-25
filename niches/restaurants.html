@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurants — Wild AI</title>
+    <link rel="icon" type="image/png" href="../uploads/logo-1777127155802.png" />
+  <link rel="apple-touch-icon" href="../uploads/logo-1777127155802.png" />
+  <link rel="stylesheet" href="../shared/styles.css" />
+  </head>
+<body>
+<nav><div class="nav-inner"></div></nav>
+<div class="mobile-menu"></div>
+<div id="niche-root"></div>
+
+<script>
+window.NICHE_DATA = {
+  slug: 'restaurants',
+  name: 'Restaurants',
+  icon: '&#127829;',
+  glowColor: '#ff9a3c',
+  headline: 'Every table filled.',
+  headlineAccent: 'Every call answered.',
+  subheadline: 'Wild AI takes reservations, manages your waitlist, answers menu questions, and handles large-party bookings — all without tying up your host stand.',
+  challenges: [
+    { title: 'Hosts can\'t answer phones during service', desc: 'During a dinner rush, your host is seating, greeting, and managing the floor. Every missed call is a reservation — and revenue — that walks out the door.' },
+    { title: 'Reservation errors cause bad experiences', desc: 'Mishearing party size, wrong date, missed special requests — front-of-house booking mistakes lead to unhappy guests and bad reviews.' },
+    { title: 'Menu and allergy questions slow down staff', desc: '"Do you have gluten-free options?" "What\'s in the risotto?" These calls pile up and take your team away from the guests already in the room.' },
+  ],
+  featuresIntro: 'Wild AI knows your menu, hours, reservation policies, and party-size rules — handling every call with the warmth of your best host.',
+  features: [
+    { title: 'Reservation Booking', desc: 'Wild AI takes complete reservation details — date, time, party size, special requests — and confirms instantly.', icon: '<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>' },
+    { title: 'Waitlist Management', desc: 'Walk-ins can call ahead to join the waitlist. Wild AI calls them when their table is ready.', icon: '<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>' },
+    { title: 'Menu & Allergy FAQs', desc: 'Instantly answers questions about menu items, dietary accommodations, allergens, and daily specials.', icon: '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>' },
+    { title: 'Large Party Coordination', desc: 'Handles group reservations with special seating requirements, pre-set menus, and deposit collection info.', icon: '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>' },
+    { title: 'Hours & Directions', desc: 'Callers asking for hours, parking, or directions get instant, accurate answers — no staff needed.', icon: '<circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 000 16c4.4 0 8-3.6 8-8s-3.6-8-8-8z"/>' },
+    { title: 'Reservation Reminders', desc: 'Automated reminders sent before each reservation — reducing no-shows and last-minute cancellations.', icon: '<path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/>' },
+  ],
+  conversation: [
+    { role: 'caller', text: 'Hi, I\'d like to make a reservation for Saturday night for 6 people.' },
+    { role: 'agent', text: 'Of course! We have availability at 6:30 PM and 8 PM on Saturday. Do you have a preference?' },
+    { role: 'caller', text: '7 PM would be ideal if possible — we have a birthday celebration.' },
+    { role: 'agent', text: 'Congratulations! We can accommodate you at 7 PM. We\'ll note the birthday — would you like us to arrange a dessert for the guest of honor?' },
+    { role: 'caller', text: 'That would be amazing, yes.' },
+    { role: 'agent', text: 'Consider it done! Reservation for 6 on Saturday at 7 PM, birthday celebration with dessert. May I get a name and number for the booking?' },
+    { role: 'caller', text: 'Rivera, and this number is fine.' },
+    { role: 'agent', text: 'Perfect, Rivera party of 6 — Saturday at 7 PM. You\'ll get a confirmation text shortly. We look forward to celebrating with you!' },
+  ],
+  ctaText: 'Let your host focus on in-restaurant guests. Wild AI handles every reservation call with the hospitality your brand is known for.',
+};
+</script>
+<script src="../shared/niche-template.js"></script>
+<script src="../shared/animations.js"></script>
+<!-- FLOATING THEME TOGGLE -->
+<button class="theme-float" aria-label="Toggle theme">
+  <span class="theme-float-icon">☀️</span>
+  <span class="theme-float-label">Light Mode</span>
+</button>
+
+</body>
+</html>

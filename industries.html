@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industries — Wild AI</title>
+    <link rel="icon" type="image/png" href="uploads/logo-1777127155802.png" />
+  <link rel="apple-touch-icon" href="uploads/logo-1777127155802.png" />
+  <link rel="stylesheet" href="shared/styles.css" />
+  <style>
+    .industries-hero { padding: 160px 0 80px; text-align: center; position: relative; overflow: hidden; }
+    .industries-hero .hero-bg { position: absolute; inset: 0; pointer-events: none; }
+    .ind-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .ind-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .ind-card:hover {
+      border-color: rgba(155,77,255,0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+    .ind-card:hover::before { opacity: 0.05; }
+    .ind-card > * { position: relative; z-index: 1; }
+    .ind-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .ind-card h3 { font-size: 1.15rem; }
+    .ind-card p { font-size: 0.875rem; flex: 1; }
+    .ind-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .ind-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .ind-link {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--subtext);
+      margin-top: 4px;
+      transition: color var(--transition), gap var(--transition);
+    }
+    .ind-card:hover .ind-link { color: var(--text); gap: 10px; }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="uploads/logo-1777127155802.png" alt="Wild AI" />
+      <span class="nav-logo-text">Wild AI</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a class="nav-dropdown-trigger active" tabindex="0">
+          Industries
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 6 8 10 12 6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <div class="dd-label">All Industries</div>
+          <a href="industries.html"><span class="dd-icon">&#9783;</span> Overview</a>
+          <div class="dd-sep"></div>
+          <a href="niches/home-services.html"><span class="dd-icon">&#127968;</span> Home Services</a>
+          <a href="niches/dental.html"><span class="dd-icon">&#129463;</span> Dental Practices</a>
+          <a href="niches/medical.html"><span class="dd-icon">&#9877;</span> Medical Practices</a>
+          <a href="niches/salons.html"><span class="dd-icon">&#9986;</span> Salons &amp; Spas</a>
+          <a href="niches/restaurants.html"><span class="dd-icon">&#127829;</span> Restaurants</a>
+          <a href="niches/law-firms.html"><span class="dd-icon">&#9878;</span> Law Firms</a>
+          <a href="niches/ecommerce.html"><span class="dd-icon">&#128722;</span> E-Commerce</a>
+          <a href="niches/real-estate.html"><span class="dd-icon">&#127970;</span> Real Estate</a>
+        </div>
+      </li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#how">How It Works</a></li>
+    </ul>
+    <a href="https://calendar.app.google/ueaZa2oXfEFxtex78" target="_blank" class="btn btn-primary">Talk To Us</a>
+    <button class="nav-mobile-toggle" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="2" y1="6" x2="20" y2="6"/><line x1="2" y1="11" x2="20" y2="11"/><line x1="2" y1="16" x2="20" y2="16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <button class="mobile-menu-close">&#x2715;</button>
+  <a href="index.html">Home</a>
+  <a href="industries.html">Industries</a>
+  <a href="index.html#features">Features</a>
+  <a href="https://calendar.app.google/ueaZa2oXfEFxtex78" target="_blank" class="btn btn-primary" style="margin-top:12px">Talk To Us</a>
+</div>
+
+<!-- Hero -->
+<div class="industries-hero">
+  <div class="hero-bg">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="badge reveal" style="margin:0 auto 20px; width:fit-content"><span class="badge-dot"></span> 8 Industries Served</div>
+    <h1 class="reveal reveal-delay-1">Wild AI works for<br /><span class="gradient-text">every business.</span></h1>
+    <p class="reveal reveal-delay-2" style="max-width:540px; margin:16px auto 0; font-size:1.1rem">
+      Whether you're a solo dentist or a multi-location home services brand, Wild AI speaks your industry's language fluently.
+    </p>
+  </div>
+</div>
+
+<!-- Industries Grid -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="industries-grid">
+
+      <a href="niches/home-services.html" class="ind-card reveal">
+        <div class="ind-icon">&#127968;</div>
+        <h3>Home Services</h3>
+        <p>From HVAC to plumbing, Wild AI handles service call booking, dispatching, and after-hours emergencies so your crew stays focused on the job.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Booking</span>
+          <span class="ind-tag">Dispatch</span>
+          <span class="ind-tag">Emergencies</span>
+          <span class="ind-tag">Follow-ups</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/dental.html" class="ind-card reveal reveal-delay-1">
+        <div class="ind-icon">&#129463;</div>
+        <h3>Dental Practices</h3>
+        <p>Fill chairs, reduce no-shows, and handle insurance and billing FAQs — all without pulling your front desk away from in-office patients.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Scheduling</span>
+          <span class="ind-tag">No-show Reduction</span>
+          <span class="ind-tag">Insurance FAQs</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/medical.html" class="ind-card reveal reveal-delay-2">
+        <div class="ind-icon">&#9877;</div>
+        <h3>Medical Practices</h3>
+        <p>Patient scheduling, intake prep guidance, prescription refill routing, and post-visit follow-ups — handled with care and compliance in mind.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Patient Scheduling</span>
+          <span class="ind-tag">Intake Prep</span>
+          <span class="ind-tag">Reminders</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/salons.html" class="ind-card reveal">
+        <div class="ind-icon">&#9986;</div>
+        <h3>Salons &amp; Spas</h3>
+        <p>Book specific stylists, manage service packages, upsell add-ons, and send reminders — keeping your chair full and clients happy.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Stylist Booking</span>
+          <span class="ind-tag">Packages</span>
+          <span class="ind-tag">Upsells</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/restaurants.html" class="ind-card reveal reveal-delay-1">
+        <div class="ind-icon">&#127829;</div>
+        <h3>Restaurants</h3>
+        <p>Take reservations, manage your waitlist, answer menu and allergy questions, and handle large party bookings — all hands-free.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Reservations</span>
+          <span class="ind-tag">Waitlist</span>
+          <span class="ind-tag">Menu FAQs</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/law-firms.html" class="ind-card reveal reveal-delay-2">
+        <div class="ind-icon">&#9878;</div>
+        <h3>Law Firms</h3>
+        <p>Capture every inbound lead, qualify case types, schedule consultations, and ensure no potential client ever hits voicemail.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Lead Intake</span>
+          <span class="ind-tag">Consultation Booking</span>
+          <span class="ind-tag">Qualification</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/ecommerce.html" class="ind-card reveal">
+        <div class="ind-icon">&#128722;</div>
+        <h3>E-Commerce</h3>
+        <p>Order tracking, return initiation, shipping questions, and product support — handled instantly at any call volume, any time of day.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Order Status</span>
+          <span class="ind-tag">Returns</span>
+          <span class="ind-tag">Shipping</span>
+          <span class="ind-tag">Support</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+      <a href="niches/real-estate.html" class="ind-card reveal reveal-delay-1">
+        <div class="ind-icon">&#127970;</div>
+        <h3>Real Estate</h3>
+        <p>Qualify buyer and renter leads, schedule property showings, answer listing questions, and follow up with prospects automatically.</p>
+        <div class="ind-tags">
+          <span class="ind-tag">Lead Qualification</span>
+          <span class="ind-tag">Showings</span>
+          <span class="ind-tag">Follow-ups</span>
+        </div>
+        <span class="ind-link">Learn more &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="badge" style="margin:0 auto 24px; width:fit-content"><span class="badge-dot"></span> Works for your business</div>
+      <h2>Don't see your industry?<br /><span class="gradient-text">Talk to us.</span></h2>
+      <p>Wild AI adapts to virtually any service business. Let's build your custom voice agent together.</p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="https://calendar.app.google/ueaZa2oXfEFxtex78" target="_blank" class="btn btn-primary btn-lg">Talk To Us</a>
+        <a href="index.html" class="btn btn-ghost btn-lg">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="uploads/logo-1777127155802.png" alt="Wild AI" />
+        <span class="nav-logo-text">Wild AI</span>
+      </a>
+      <div class="footer-links">
+        <a href="niches/home-services.html">Home Services</a>
+        <a href="niches/dental.html">Dental</a>
+        <a href="niches/medical.html">Medical</a>
+        <a href="niches/salons.html">Salons</a>
+        <a href="niches/restaurants.html">Restaurants</a>
+        <a href="niches/law-firms.html">Law Firms</a>
+        <a href="niches/ecommerce.html">E-Commerce</a>
+        <a href="niches/real-estate.html">Real Estate</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Wild AI. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared/animations.js"></script>
+<!-- FLOATING THEME TOGGLE -->
+<button class="theme-float" aria-label="Toggle theme">
+  <span class="theme-float-icon">☀️</span>
+  <span class="theme-float-label">Light Mode</span>
+</button>
+
+</body>
+</html>
